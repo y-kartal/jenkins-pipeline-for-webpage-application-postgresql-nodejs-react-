@@ -82,8 +82,8 @@
   hosts: _ansible_postgresql
   become: true
   vars:
-    container_name: recep_postgre
-    image_name: 403624264905.dkr.ecr.us-east-1.amazonaws.com/clarusway-repo/cw-todo-app:postgre
+    container_name: yasin_postgre
+    image_name: 403624264905.dkr.ecr.us-east-1.amazonaws.com/yasin-repo/cw-todo-app:postgre
   tasks:
     - name: remove postgre container
       community.docker.docker_container:
@@ -112,8 +112,8 @@
   hosts: _ansible_nodejs
   become: true
   vars:
-    container_name: recep_nodejs
-    image_name: 403624264905.dkr.ecr.us-east-1.amazonaws.com/clarusway-repo/cw-todo-app:nodejs
+    container_name: yasin_nodejs
+    image_name: 403624264905.dkr.ecr.us-east-1.amazonaws.com/yasin-repo/cw-todo-app:nodejs
   tasks:
     - name: remove postgre container
       community.docker.docker_container:
@@ -138,8 +138,8 @@
   hosts: _ansible_react
   become: true
   vars:
-    container_name: recep_react
-    image_name: 403624264905.dkr.ecr.us-east-1.amazonaws.com/clarusway-repo/cw-todo-app:react
+    container_name: yasin_react
+    image_name: 403624264905.dkr.ecr.us-east-1.amazonaws.com/yasin-repo/cw-todo-app:react
   tasks:
     - name: remove postgre container
       community.docker.docker_container:
