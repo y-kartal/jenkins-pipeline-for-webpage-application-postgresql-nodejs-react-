@@ -10,7 +10,7 @@ pipeline{
         AWS_REGION = "us-east-1"
         AWS_ACCOUNT_ID=sh(script:'export PATH="$PATH:/usr/local/bin" && aws sts get-caller-identity --query Account --output text', returnStdout:true).trim()
         ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
-        APP_REPO_NAME = "clarusway-repo/cw-todo-app"
+        APP_REPO_NAME = "yasin-repo/cw-todo-app"
     }
 
     stages {
@@ -112,6 +112,13 @@ pipeline{
             echo 'Deleting all local images'
             sh 'docker image prune -af'
         }
+
+        success {
+             script {
+             slackSend channel: '#class-chat', color: ' #439FE0', message: 'Buyuk proje is coming !!!! ', teamDomain: 'devops15tr', tokenCredentialId: 'jenkins-slack'
+                }
+         }
+
 
         failure {
 
