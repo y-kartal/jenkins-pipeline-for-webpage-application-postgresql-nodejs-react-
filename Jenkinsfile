@@ -115,7 +115,7 @@ pipeline{
 
         success {
              script {
-             slackSend channel: '#class-chat', color: ' #439FE0', message: 'Buyuk proje is coming !!!! ', teamDomain: 'devops15tr', tokenCredentialId: 'jenkins-slack'
+             slackSend channel: '#class-chat', color: ' #439FE0', message: 'We are eagerly anticipating the big project!!!!! ', teamDomain: 'devops15tr', tokenCredentialId: 'jenkins-slack'
                 }
          }
 
